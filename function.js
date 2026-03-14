@@ -86,11 +86,57 @@
 
 // console.log(isEven(10)); // Має бути "Це число парне"
 // console.log(isEven(9)); // Має бути "Це число непарне"
-// =========================================================
+// =====================push====================================
 // Масиви (Arrays) 📚
-let fruits = ["Яблуко", "Банан", "Апельсин"];
-console.log(fruits.length);
+// let fruits = ["Яблуко", "Банан", "Апельсин"];
+// console.log(fruits.length);
 
-let tasks = ["Learn JS", "Drink coffee"];
-tasks.push("Go to the gym");
-console.log(tasks);
+// let tasks = ["Learn JS", "Drink coffee"];
+// tasks.push("Go to the gym");
+// tasks.push("Read a book");
+// console.log(tasks);
+// ====================unshift====shift=================================
+// unshift("fruit") — додає елемент на початок масиву (індекс 0).
+// shift() — видаляє перший елемент.
+
+// let fruits = ["Apple", "Banana", "Orange"];
+
+// fruits.unshift("Strawberry");
+// fruits.push("Grapes");
+// console.log(fruits); // ['Strawberry', 'Apple', 'Banana', 'Orange', 'Grapes']
+// console.log(fruits.length - 1); // 4
+// console.log(fruits[fruits.length - 1]); // Завжди виведе останній елемент
+// ===========================Loops==============================
+// for...of
+
+// let fruits = ["Apple", "Banana", "Orange"];
+
+// for (let fruit of fruits) {
+//   console.log("I want to eat " + fruit);
+// }
+// =========================================================
+// let prices = [100, 250, 80, 150];
+
+// function showPrices(arr) {
+//   for (let price of arr) {
+//     console.log("Price: " + price);
+//   }
+// }
+// showPrices(prices);
+// =========================================================
+let prices = [50, 150, 30, 200, 450];
+
+function calculateExpensiveTotal(pricesArr) {
+  let sum = 0;
+
+  for (let price of pricesArr) {
+    if (price > 100) {
+      console.log("Expensive item found: " + price);
+      sum += price;
+    }
+  }
+
+  return sum;
+}
+
+console.log("Total for expensive items:", calculateExpensiveTotal(prices));
