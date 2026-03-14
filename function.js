@@ -139,4 +139,5 @@ function calculateExpensiveTotal(pricesArr) {
   return sum;
 }
 
-console.log("Total for expensive items:", calculateExpensiveTotal(prices));
+let result = calculateExpensiveTotal(prices);
+console.log("Final sum: " + result);
