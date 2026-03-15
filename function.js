@@ -124,20 +124,79 @@
 // }
 // showPrices(prices);
 // =========================================================
-let prices = [50, 150, 30, 200, 450];
+// let prices = [50, 150, 30, 200, 450];
 
-function calculateExpensiveTotal(pricesArr) {
-  let sum = 0;
+// function calculateExpensiveTotal(pricesArr) {
+//   let sum = 0;
 
-  for (let price of pricesArr) {
-    if (price > 100) {
-      console.log("Expensive item found: " + price);
-      sum += price;
-    }
-  }
+//   for (let price of pricesArr) {
+//     if (price > 100) {
+//       console.log("Expensive item found: " + price);
+//       sum += price;
+//     }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-let result = calculateExpensiveTotal(prices);
-console.log("Final sum: " + result);
+// let result = calculateExpensiveTotal(prices);
+// console.log("Final sum: " + result);
+
+// ========================Shopping Cart=======================================
+// const cart = [10, 25, 40, 5, 100]; // Ціни товарів
+
+// function processOrder(prices) {
+//   // 1. Перевірка: якщо масив порожній (довжина 0),
+//   // поверни рядок "Your cart is empty!"
+//   if (prices.length === 0) {
+//     return "Your cart is empty!";
+//   }
+
+//   let total = 0;
+
+//   // 2. Використай цикл for...of, щоб додати кожну ціну до total
+//   for (let price of prices) {
+//     total += price;
+//   }
+
+//   // 3. Додай 5% податку до total
+//   // Підказка: total = total * 1.05;
+//   total = total * 1.05;
+
+//   return "Final price with tax: " + total;
+// }
+
+// console.log(processOrder(cart));
+// console.log(processOrder([])); // Перевірка порожнього кошика
+
+// ======================Objects===================================
+// const cart = [
+//   { name: "Milk", price: 30 },
+//   { name: "Bread", price: 20 },
+//   { name: "Cheese", price: 100 },
+// ];
+
+// let total = 0;
+
+// for (let item of cart) {
+//   console.log("Adding: " + item.name); // Дістаємо назву
+//   total += item.price; // Дістаємо ціну і додаємо до суми
+// }
+// console.log("Total sum: " + total);
+
+// =========================================================
+// let user = {
+//   name: "Ivan",
+//   isPremium: true, // Чи є у нього преміум-підписка?
+// };
+
+// function greetUser(person) {
+//   if (person.isPremium === true) {
+//     return `Welcome, ${person.name} !`;
+//   } else {
+//     return `Hello, ${person.name}! Upgrade to Premium for discounts.`;
+//   }
+// }
+
+// console.log(greetUser(user)); // Має вивести: "Hello, Ivan! Upgrade to Premium for discounts."
+// =========================================================
