@@ -200,3 +200,10 @@
 
 // console.log(greetUser(user)); // Має вивести: "Hello, Ivan! Upgrade to Premium for discounts."
 // =========================================================
+let laptop = {
+  model: "MacBook",
+  price: 1000
+};
+
+laptop.price = 1200; // Оновлюємо ціну
+console.log(laptop); // Виведе: { model: 'MacBook', price: 1200 }
