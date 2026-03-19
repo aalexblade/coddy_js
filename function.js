@@ -200,10 +200,104 @@
 
 // console.log(greetUser(user)); // Має вивести: "Hello, Ivan! Upgrade to Premium for discounts."
 // =========================================================
-let laptop = {
-  model: "MacBook",
-  price: 1000
-};
+// let laptop = {
+//   model: "MacBook",
+//   price: 1000,
+// };
 
-laptop.price = 1200; // Оновлюємо ціну
-console.log(laptop); // Виведе: { model: 'MacBook', price: 1200 }
+// laptop.price += 200; // Оновлюємо ціну
+// laptop.color = "Silver"; // Додаємо нову властивість
+// laptop["brand"] = "Apple"; // Додаємо ще одну властивість
+// console.log(laptop); // Виведе: { model: 'MacBook', price: 1200 }
+
+// =========================================================
+// let users = [
+//   { name: "Ivan", isPremium: true },
+//   { name: "Oksana", isPremium: false },
+//   { name: "Anton", isPremium: true },
+// ];
+
+// // Наша функція-"обробник" для однієї людини
+// function greetUser(person) {
+//   if (person.isPremium) {
+//     return `Welcome, ${person.name}! Enjoy your 50% discount.`;
+//   } else {
+//     return `Hello, ${person.name}! Upgrade to Premium for discounts.`;
+//   }
+// }
+
+// // // Твій цикл, але з використанням функції
+// // for (let user of users) {
+// //   let message = greetUser(user); // Функція обробляє поточного користувача
+// //   console.log(message);          // Виводимо гарний текст
+// // }
+
+// users[1].isPremium = true; // Оксана тепер преміум
+
+// for (let user of users) {
+//   if (user.isPremium === true) {
+//     console.log("Premium member: " + user.name);
+//   }
+// }
+
+// =========================================================
+// let products = [
+//   { name: "Laptop", price: 1000 },
+//   { name: "Mouse", price: 50 },
+//   { name: "Keyboard", price: 80 },
+// ];
+
+// for (let product of products) {
+//   if (product.price > 100) {
+//     product.price = product.price * 0.9; // Додаємо 10% до ціни
+//     console.log(`SALE: ${product.name} costs only ${product.price}`);// Виводимо оновлену ціну
+//   }
+// }
+
+// console.log(products); // Виведе оновлений масив з новими цінами
+// ========================Filter=================================
+
+// let products = [
+//   { name: "Laptop", price: 1000 },
+//   { name: "Mouse", price: 50 },
+//   { name: "Keyboard", price: 80 },
+//   { name: "Monitor", price: 300 }
+// ];
+
+// console.log("--- Items with discount ---");
+
+// for (let product of products) {
+//   if (product.price > 100) {
+//     product.price = product.price * 0.9;
+//     // Цей рядок спрацює ТІЛЬКИ для Laptop та Monitor
+//     console.log(`SALE: ${product.name} costs only ${product.price}`);
+//   }
+// }
+
+// // Створюємо новий масив, де будуть ТІЛЬКИ дорогі товари
+// let expensiveProducts = products.filter(product => product.price > 100);
+
+// console.log(expensiveProducts); 
+// // Виведе масив тільки з Laptop та Monitor
+// =========================================================
+
+let tasks = [
+  { title: "Buy milk", isDone: true },
+  { title: "Learn JavaScript", isDone: false },
+  { title: "Workout", isDone: false },
+  { title: "Call Mom", isDone: true }
+];
+
+// if (tasks.isDone === true) {
+//   console.log("Task is completed: " + tasks.title);
+// }
+// for(let task of tasks) {
+//   if(task.isDone === true) {
+//     console.log("Task is completed: " + task.title);
+//   } 
+// }
+
+// console.log(tasks);
+tasks[1].isDone = true;
+const completedTasks = tasks.filter(task => task.isDone === true);
+console.log(completedTasks);
