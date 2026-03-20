@@ -279,25 +279,46 @@
 
 // console.log(expensiveProducts); 
 // // Виведе масив тільки з Laptop та Monitor
-// =========================================================
+// =======================filter==================================
 
+// let tasks = [
+//   { title: "Buy milk", isDone: true },
+//   { title: "Learn JavaScript", isDone: false },
+//   { title: "Workout", isDone: false },
+//   { title: "Call Mom", isDone: true }
+// ];
+
+// // if (tasks.isDone === true) {
+// //   console.log("Task is completed: " + tasks.title);
+// // }
+// // for(let task of tasks) {
+// //   if(task.isDone === true) {
+// //     console.log("Task is completed: " + task.title);
+// //   } 
+// // }
+
+// // console.log(tasks);
+// tasks[1].isDone = true;
+// const completedTasks = tasks.filter(task => task.isDone === true);
+// console.log(completedTasks);
+// =========================Map==================================
 let tasks = [
   { title: "Buy milk", isDone: true },
   { title: "Learn JavaScript", isDone: false },
   { title: "Workout", isDone: false },
   { title: "Call Mom", isDone: true }
 ];
+const taskTitles = tasks.map(task => task.title);
 
-// if (tasks.isDone === true) {
-//   console.log("Task is completed: " + tasks.title);
-// }
-// for(let task of tasks) {
-//   if(task.isDone === true) {
-//     console.log("Task is completed: " + task.title);
-//   } 
-// }
+console.log(taskTitles); 
+// Виведе: ["Buy milk", "Learn JavaScript", "Workout", "Call Mom"]
 
-// console.log(tasks);
-tasks[1].isDone = true;
-const completedTasks = tasks.filter(task => task.isDone === true);
-console.log(completedTasks);
+const statusList = tasks.map(task => {
+  if (task.isDone) {
+    return "✅ " + task.title;
+  } else {
+    return "❌ " + task.title;
+  }
+});
+
+console.log(statusList);
