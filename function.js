@@ -324,6 +324,48 @@
 // console.log(statusList);
 // ===========================================================
 
-let process = (a, b) => a + b;
-process(5, 10);
-console.log(process(5, 10));
+// let process = (a, b) => a + b;
+// process(5, 10);
+// console.log(process(5, 10));
+// ============================================================
+
+// const isValid = (username, password) => {
+//   if (username === "user" && password === "qweasd") {
+//     return true;
+//   } else if (username === "admin") {
+//     return "Password valid!";
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(isValid("user", "qweasd")); // Має вивести: "Password valid!"
+// console.log(isValid("admin", "qweasd")); // Має вивести: "Welcome, admin!"
+// console.log(isValid("guest", "12345")); // Має вивести: false
+
+// ------------------------------------------------
+// const isValid = (username, password) => {
+//   if (username === "admin") {
+//     return true;
+//   }
+//   if (username === "user" && password === "qweasd") {
+//     return true;
+//   }
+//   return false;
+// };
+
+// console.log(isValid("admin", "qweasd")); // Має вивести: true
+// console.log(isValid("user", "qweasd"));
+// console.log(isValid("guest", "12345")); // Має вивести: false
+
+// -------------------------------------------------
+const isValid = (username, password) => {
+  if (username === "admin" || (username === "user" && password === "qweasd")) {
+    return true;
+  } 
+    return false;
+  };
+
+console.log(isValid("admin", "qweasd")); // Має вивести: true
+console.log(isValid("user", "qweasd")); // Має вивести: true    
+console.log(isValid("guest", "12345")); // Має вивести: false
