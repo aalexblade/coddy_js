@@ -359,13 +359,27 @@
 // console.log(isValid("guest", "12345")); // Має вивести: false
 
 // -------------------------------------------------
-const isValid = (username, password) => {
-  if (username === "admin" || (username === "user" && password === "qweasd")) {
-    return true;
-  } 
-    return false;
-  };
+// const isValid = (username, password) => {
+//   if (username === "admin" || (username === "user" && password === "qweasd")) {
+//     return true;
+//   }
+//     return false;
+//   };
 
-console.log(isValid("admin", "qweasd")); // Має вивести: true
-console.log(isValid("user", "qweasd")); // Має вивести: true    
-console.log(isValid("guest", "12345")); // Має вивести: false
+// console.log(isValid("admin", "qweasd")); // Має вивести: true
+// console.log(isValid("user", "qweasd")); // Має вивести: true
+// console.log(isValid("guest", "12345")); // Має вивести: false
+// ============================================================
+
+let arr = [10, 20, 30, 20, 40];
+
+function replaceValue(aarr, target, replacement) {
+  for (let i = 0; i < arr.length; i++) {
+    if (aarr[i] === target) {
+      aarr[i] = replacement;
+    }
+  }
+  return aarr;
+}
+
+console.log(replaceValue([10, 20, 30, 20], 20, 99));
