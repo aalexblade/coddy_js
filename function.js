@@ -371,15 +371,44 @@
 // console.log(isValid("guest", "12345")); // Має вивести: false
 // ============================================================
 
-let arr = [10, 20, 30, 20, 40];
+// let arr = [10, 20, 30, 20, 40];
 
-function replaceValue(aarr, target, replacement) {
-  for (let i = 0; i < arr.length; i++) {
-    if (aarr[i] === target) {
-      aarr[i] = replacement;
+// function replaceValue(aarr, target, replacement) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (aarr[i] === target) {
+//       aarr[i] = replacement;
+//     }
+//   }
+//   return aarr;
+// }
+
+// console.log(replaceValue([10, 20, 30, 20], 20, 99));
+
+// =============================================================
+
+// function countVowels(str) {
+//   let count = 0;
+//   const vowels = "aeiouAEIOU"; // Рядок з усіма голосними літерами
+//   for (let char of str) {
+//     if (str.toLowerCase() === "a") {
+//       count++;
+//     }
+//   }
+// }
+
+// console.log(count);
+
+function countVowels(str) {
+  let count = 0;
+  const vowels = "aeiouy"; // Список голосних
+
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count++;
     }
   }
-  return aarr;
+  return count; // Повертаємо результат
 }
 
-console.log(replaceValue([10, 20, 30, 20], 20, 99));
+const result = countVowels("Javascript");
+console.log(result); // Виведе: 3
