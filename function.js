@@ -397,18 +397,33 @@
 // }
 
 // console.log(count);
+// ==============================================================
+// function countVowels(str) {
+//   let count = 0;
+//   const vowels = "aeiouy"; // Список голосних
 
-function countVowels(str) {
-  let count = 0;
-  const vowels = "aeiouy"; // Список голосних
+//   for (let char of str.toLowerCase()) {
+//     if (vowels.includes(char)) {
+//       count++;
+//     }
+//   }
+//   return count; // Повертаємо результат
+// }
 
-  for (let char of str.toLowerCase()) {
-    if (vowels.includes(char)) {
-      count++;
-    }
+// const result = countVowels("Javascript");
+// console.log(result); // Виведе: 3
+// ==============================================================
+
+function reverseWords(str) {
+  const words = str.split(" ");
+  let result = [];
+
+  for (let word of words) {
+    let reversed = word.split("").reverse().join("");
+    result.push(reversed);
   }
-  return count; // Повертаємо результат
+  return result.join(" ");
 }
 
-const result = countVowels("Javascript");
-console.log(result); // Виведе: 3
+console.log(reverseWords("Hello World")); // Має вивести: "World Hello"
+
