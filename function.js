@@ -414,16 +414,16 @@
 // console.log(result); // Виведе: 3
 // ==============================================================
 
-function reverseWords(str) {
-  const words = str.split(" ");
-  let result = [];
+// function reverseWords(str) {
+//   const words = str.split(" ");
+//   let result = [];
 
-  for (let word of words) {
-    let reversed = word.split("").reverse().join("");
-    result.push(reversed);
-  }
-  return result.join(" ");
-}
+//   for (let word of words) {
+//     let reversed = word.split("").reverse().join("");
+//     result.push(reversed);
+//   }
+//   return result.join(" ");
+// }
 
-console.log(reverseWords("Hello World")); // Має вивести: "World Hello"
+// console.log(reverseWords("Hello World")); // Має вивести: "World Hello"
 
