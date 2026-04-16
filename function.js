@@ -427,3 +427,17 @@
 
 // console.log(reverseWords("Hello World")); // Має вивести: "World Hello"
 
+// =============================================================
+// Created a function transFormArray that
+
+const arr = [5, 10, 15, 20, 25];
+
+function transformArray(arr) {
+  return arr
+  .filter(num => num >= 10)
+  .map(num => num * 2);
+
+  console.log(arr);
+}
+
+console.log(transformArray(arr)); 
