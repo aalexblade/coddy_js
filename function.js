@@ -430,14 +430,23 @@
 // =============================================================
 // Created a function transFormArray that
 
-const arr = [5, 10, 15, 20, 25];
+// const arr = [5, 10, 15, 20, 25];
 
-function transformArray(arr) {
-  return arr
-  .filter(num => num >= 10)
-  .map(num => num * 2);
+// function transformArray(arr) {
+//   return arr.filter((num) => num >= 10).map((num) => num * 2);
+// }
 
-  console.log(arr);
-}
+// console.log(transformArray(arr));
 
-console.log(transformArray(arr)); 
+// =============================================================
+//Create a program that receives two arrays of numbers as input (given) 
+// and prints a new array of all elements that are in the first 
+// array but NOT in the second array.
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [2, 4, 6];
+
+const result = array1.filter(item =>!array2.includes(item));
+console.log(result); // Виведе: [1, 3, 5]
+
+// ===============================================================
