@@ -439,14 +439,40 @@
 // console.log(transformArray(arr));
 
 // =============================================================
-//Create a program that receives two arrays of numbers as input (given) 
-// and prints a new array of all elements that are in the first 
+//Create a program that receives two arrays of numbers as input (given)
+// and prints a new array of all elements that are in the first
 // array but NOT in the second array.
 
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [2, 4, 6];
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [2, 4, 6];
 
-const result = array1.filter(item =>!array2.includes(item));
-console.log(result); // Виведе: [1, 3, 5]
+// const result = array1.filter(item =>!array2.includes(item));
+// console.log(result); // Виведе: [1, 3, 5]
 
 // ===============================================================
+// Created a function add and remove Item
+
+let groceryList = [];
+
+function addItem(item) {
+  groceryList.push(item);
+  console.log(`${item} added to the grocery list.`);
+}
+
+function removeItem(item) {
+  const index = groceryList.indexOf(item);
+
+  if (index !== -1) {
+    groceryList.splice(index, 1);
+    console.log(`${item} removed from the grocery list.`);
+  } else {
+    console.log(`${item} not found in the grocery list.`);
+  }
+}
+
+addItem("Milk");
+addItem("Bread");
+addItem("Eggs");
+removeItem("Milk");
+removeItem("Bread");
+removeItem("Eggs");
