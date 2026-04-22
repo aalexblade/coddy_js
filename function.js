@@ -452,6 +452,32 @@
 // ===============================================================
 // Created a function add and remove Item
 
+// let groceryList = [];
+
+// function addItem(item) {
+//   groceryList.push(item);
+//   console.log(`${item} added to the grocery list.`);
+// }
+
+// function removeItem(item) {
+//   const index = groceryList.indexOf(item);
+
+//   if (index !== -1) {
+//     groceryList.splice(index, 1);
+//     console.log(`${item} removed from the grocery list.`);
+//   } else {
+//     console.log(`${item} not found in the grocery list.`);
+//   }
+// }
+
+// addItem("Milk");
+// addItem("Bread");
+// addItem("Eggs");
+// removeItem("Milk");
+// removeItem("Bread");
+// removeItem("Eggs");
+// =================
+
 let groceryList = [];
 
 function addItem(item) {
@@ -470,9 +496,11 @@ function removeItem(item) {
   }
 }
 
-addItem("Milk");
-addItem("Bread");
-addItem("Eggs");
-removeItem("Milk");
-removeItem("Bread");
-removeItem("Eggs");
+    addItem("Milk");
+    addItem("Bread");
+    addItem("Eggs");
+    removeItem("Eggs");
+    removeItem("Milk");     
+    removeItem("Bread");
+
+  
